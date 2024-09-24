@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { isMobile, isTablet } from "react-device-detect";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Unsuported from "./containers/pages/Unsuported/Unsuported";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {!isTablet && !isMobile ? (
+        <Routes>
+          <Route path="/" element={<p>oke</p>} />
+        </Routes>
+      ) : (
+        <>
+          <Unsuported />
+        </>
+      )}
+    </>
   );
 }
 
