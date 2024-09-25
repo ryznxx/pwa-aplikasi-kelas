@@ -1,8 +1,37 @@
 .container-inputsearch {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  gap: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+
   input {
     border-radius: 20px;
     height: 3rem;
     width: 100%;
     border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.container-inputsearchx {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  padding: 5px 20px;
+  gap: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+
+  input {
+    border-radius: 20px;
+    height: 3rem;
+    width: 100%;
+    border: none;
+    &:focus {
+      outline: none;
+    }
   }
 }

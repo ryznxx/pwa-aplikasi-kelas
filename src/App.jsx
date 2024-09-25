@@ -23,8 +23,8 @@ function App() {
 
   return (
     <>
-      {(isTablet && isMobile) ||
-      sessionStorage.getItem("device") === "Mobile" ? (
+      {(!isTablet && !isMobile) ||
+      !sessionStorage.getItem("device") === "Mobile" ? (
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
