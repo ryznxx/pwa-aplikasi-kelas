@@ -1,0 +1,21 @@
+.container-taskbox {
+  .taskbox-list {
+    #taskbox-sj {
+      margin-top: 10px;
+    }
+  }
+}
+
+.taskbox-list-wrapper {
+  margin: 10px 0px;
+  .taskbox-item {
+    color: #fff;
+    border-radius: 20px;
+    background: #000000;
+    .taskbox-item-info {
+      border-top: 2px solid #fff;
+      border-spacing: 200px;
+      padding: 20px;
+    }
+  }
+}

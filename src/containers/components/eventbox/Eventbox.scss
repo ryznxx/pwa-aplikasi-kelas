@@ -1,0 +1,67 @@
+.container-eventbox {
+  position: relative;
+  .eventbox-atas {
+    margin: 10px 0px;
+    padding: 10px 0px;
+    position: relative;
+    mask: linear-gradient(90deg, #000 10% 80%, #0000);
+    -webkit-mask: linear-gradient(90deg, #000 10% 80%, #0000);
+    transition: all 0.5s ease-in-out;
+    &.active {
+      mask: linear-gradient(90deg, #0000, #000 10% 80%, #0000);
+      -webkit-mask: linear-gradient(90deg, #0000, #000 10% 80%, #0000);
+    }
+    .eventbox-atas-scroll {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      overflow-x: scroll;
+      scroll-snap-type: mandatory;
+      scroll-snap-type: x mandatory;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      button {
+        display: block;
+        background: transparent;
+        &:nth-last-child(1) {
+          margin-right: 20vw;
+        }
+      }
+      #close {
+        scroll-snap-align: start;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 7px 10px;
+      }
+      #hari-ini {
+        text-wrap: nowrap;
+        scroll-snap-align: start;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-weight: 500;
+      }
+      #besok {
+        scroll-snap-align: start;
+        // background: black;
+        // color: #fff;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-weight: 500;
+      }
+      #kemarin {
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-weight: 500;
+      }
+      .active {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+}

@@ -6,8 +6,12 @@ const Inputsearch = ({}) => {
   return (
     <>
       <div className="container-inputsearch">
-        <span class="material-symbols-rounded">search</span>
-        <input type="text" placeholder="Search" onChange={(e) => setInput()} />
+        <span className="material-symbols-rounded">search</span>
+        <input
+          type="text"
+          placeholder="Cari Tugas"
+          onChange={(e) => setInput()}
+        />
       </div>
     </>
   );

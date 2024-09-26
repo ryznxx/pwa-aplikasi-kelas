@@ -23,16 +23,16 @@ function App() {
 
   return (
     <>
-      {(!isTablet && !isMobile) ||
-      !sessionStorage.getItem("device") === "Mobile" ? (
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      ) : (
+      {/* {(isTablet && isMobile) ||
+      sessionStorage.getItem("device") === "Mobile" ? ( */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      {/* ) : (
         <>
           <Unsuported />
         </>
-      )}
+      )} */}
     </>
   );
 }
